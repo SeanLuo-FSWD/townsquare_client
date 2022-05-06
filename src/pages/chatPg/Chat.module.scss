@@ -1,0 +1,60 @@
+.chatContainer {
+  margin: 0;
+  padding: 50px 0;
+  // height: 100%;
+  // padding: 0px 10px;
+  flex-direction: row;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.startGroupChatButton {
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 30px;
+
+  border: none;
+  font-size: 14px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: #92002f;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.townSquareLogo {
+  min-width: 30px;
+  display: inline-block;
+  width: 10px;
+  height: auto;
+  border-radius: 33%;
+  border: solid;
+  border-width: 2px;
+  border-color: #f6efe8;
+  align-items: center;
+  text-align: center;
+}
+
+.plusWrapper {
+  position: relative;
+}
+
+.plusIcon {
+  width: 13px;
+  position: absolute;
+
+  top: -17px;
+  left: -15px;
+
+}
+
+.groupChatIcon {
+  width: 28px;
+  filter: invert(100%);
+  position: absolute;
+  left: -38px;
+  top: -15px;
+}

@@ -1,0 +1,104 @@
+.post {
+  border-width: 2px;
+  border-radius: 2px;
+}
+
+.flexItem {
+  padding: 0px 0px 0px 7px;
+  font-size: 17px;
+}
+
+.postContainer {
+  background-color: #f6efe8;
+  margin: 0px 0px 10px 0px;
+  border-radius: 7px;
+}
+
+.textContainer {
+  margin: 0px 25px 15px 25px;
+  display: flex;
+  justify-content: left;
+
+  font-size: 15px;
+  text-align: left;
+}
+
+.likeCommentContainer {
+  padding: 5px 15px 10px 15px;
+  border-radius: 4px;
+
+}
+
+.likesNames {
+  a {
+    text-decoration: none;
+    color: #92002f;
+  }
+
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  margin: 2px 0px;
+}
+
+.commentCounter {
+    padding: 0px 0px 0px 7px;
+    display: flex;
+    align-items: center;
+
+}
+
+.test {
+  display: flex;
+  background-color: gold;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 15px;
+}
+
+
+.postWrapper__img {
+  height: 50px;
+  width: 50px;
+}
+
+
+.submitComment {
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 25px;
+  padding-left: 25px;
+  border-color: white;
+  border-style: none;
+  border-radius: 50px; /* 5px rounded corners */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  max-width: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  border-radius: 5px;
+  border: none;
+  height: 20px;
+  
+}
+
+.addComment {
+  padding: 1px;
+}
+
+.likeCommentNav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 10px 10px 10px;
+  padding: 0px 0px;
+}

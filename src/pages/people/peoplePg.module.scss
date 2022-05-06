@@ -1,0 +1,79 @@
+.header {
+  background-color: #92002f;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  max-width: 600px;
+  margin: 0;
+  border-bottom-left-radius: 0.1rem;
+  border-bottom-right-radius: 0.1rem;
+  padding: 0px 10px;
+}
+
+.townSquareLogo {
+  min-width: 30px;
+  display: inline-block;
+  width: 10px;
+  height: auto;
+  border-radius: 33%;
+  border: solid;
+  border-width: 2px;
+  border-color: #f6efe8;
+  align-items: center;
+  text-align: center;
+}
+
+.logoAndGreeting {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.userIcons {
+  width: 1.4rem;
+}
+
+.peopleNav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  max-width: 600px;
+  margin: 0;
+  border-bottom-left-radius: 0.1rem;
+  border-bottom-right-radius: 0.1rem;
+  /* padding: 0px 10px; */
+  display: flex;
+  grid-gap: 10px;
+  // padding: .7rem 1.7rem;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.subNavIcons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.detailedViewToggle {
+  background: none;
+  border: none;
+}
+
+.filterIcon {
+  justify-content: end;
+  padding: 0;
+}
+
+.nav {
+  padding: 0;
+}
+
+.userContainer {
+  position: relative;
+  padding: 0px 0px 70px 0px;
+}

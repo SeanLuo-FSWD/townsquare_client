@@ -1,0 +1,27 @@
+.peopleFilterContainer {
+  flex-wrap: wrap;
+  border-radius: 7px;
+  height: 70%;
+}
+
+.filterStyling {
+  width: 100%;
+
+  .minMaxAge {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+.filterTitle {
+  margin: 5px 0;
+}
+
+.ageIndicator {
+  display: inline-block;
+  position: relative;
+  left: 20px;
+  font-size: 14px;
+  font-weight: normal;
+}

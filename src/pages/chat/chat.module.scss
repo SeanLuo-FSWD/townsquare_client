@@ -1,0 +1,123 @@
+.chatNavUserInfo {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-around;
+  align-items: center;
+  text-align: right;
+  grid-gap: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.messageBox {
+  width: 100%;
+  grid-row: 2/3;
+
+  scroll-snap-type: mandatory;
+
+  overflow-y: scroll;
+
+}
+.avatarNav {  
+  display: flex;
+  position: relative;
+  flex-direction: row;
+
+  
+  img {
+    border-radius: 50%;
+    margin: 0px 3px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+  }
+  border-radius: 50%;
+  border-radius: 50%;
+}
+
+.img {
+  border-radius: 50%;
+
+}
+
+.messageContainer {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 50px 1fr 52px 50px;
+}
+
+.chatFieldContainer {
+  position: fixed;
+  background-color: white;
+  padding: 10px 0px 10px 0px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  bottom: 50px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  grid-gap: 10px;
+}
+
+.messageField {
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0px 0px 0px 15px;
+  height: 30px;
+  border-radius: 10px;
+  border: solid 2px #92002f;
+  background-color: rgb(255, 255, 255);
+}
+
+.sendButton {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 36px;
+  width: 85px;
+  border: none;
+  border-radius: 10px;
+  margin: 0px 16px 0px 0px;
+  background-color: #92002f;
+  color: white;
+}
+
+.chatSubNavWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+  align-items: center;
+  position: relative;
+  right: 30px;
+  top: 9px;
+}
+
+.chatRows {
+  // background-color: royalblue;
+}
+
+.backgroundContainer {
+  background-color: blue;
+}
+
+.avatarContainer {
+  height: 60px;
+  box-sizing: border-box;
+  padding: 7px 0;
+  display: inline-flex;
+  position: absolute;
+}
+
+.avatarThumbnail {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #2D2B2C;
+  box-sizing: border-box;
+}

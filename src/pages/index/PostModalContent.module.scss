@@ -1,0 +1,46 @@
+.postModal {
+
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 7px;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    textarea {
+        width: 100%;
+    }
+
+}
+
+.createPostSubmit {
+    color: white;
+    background-color: #92002f;
+    border: solid 2px;
+    border-color: #92002f;
+    height: 1.5rem;
+    max-width: 25%;
+    margin: 7px 0px;
+    border-radius: 10px;
+    border: none;
+}
+
+.createPostForm {
+    padding: 10px;
+}
+
+.postPreview {
+    margin: 5px 0px;
+}
+
+.chooseFiles {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    
+    padding: 5px 0px;
+    
+}

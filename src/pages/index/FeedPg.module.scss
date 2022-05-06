@@ -1,0 +1,109 @@
+.SubNavWrap {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  margin: 0;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.townSquareTitle {
+  flex-basis: 100%;
+}
+
+.logo {
+  min-width: 30px;
+  display: inline-block;
+  width: 10px;
+  height: auto;
+  border-radius: 33%;
+  border: solid;
+  border-width: 2px;
+  border-color: #f6efe8;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  align-items: left;
+}
+
+body {
+  background: #e4dee0;
+  font-family: "Poppins", sans-serif;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+}
+
+.createPost {
+  color: white;
+  width: 1.4rem;
+  position: relative;
+  left: 7px;
+}
+
+.filter {
+  width: 1rem;
+}
+
+.applied {
+  background-color: blue;
+}
+
+.postWrapper {
+  background-color: #f6efe8;
+  border-width: thin;
+  border-radius: 4px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.postWrapper__img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+
+  background-size: cover;
+  object-fit: cover;
+}
+
+.feedContainer {
+  padding: 50px 0;
+}
+
+.dateInfo {
+  font-size: 14px;
+}
+
+.flexpostNav {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding-right: 5px;
+  img {
+    border: solid #E5E5E5;
+  }
+}
+
+.flexpostNavDetails {
+  display: flex;
+  align-items: left;
+  text-align: left;
+  flex: 0 0px 79%;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.flexpostNavCreatedTime {
+  @extend .flexpostNav;
+  font-size: 16px;
+}
+
+.followUnfollowDelete {
+  padding-right: 5px;
+  width: 1.4rem;
+}

@@ -1,0 +1,253 @@
+.pagePadding {
+  padding: 50px 0 60px 0;
+}
+
+.profileContainer {
+  text-align: center;
+
+  max-width: 480px;
+  width: 80%;
+  margin: auto;
+
+}
+
+.profilePage {
+}
+
+
+.updateMessage {
+  text-align: center;
+  color: white;
+}
+
+.userPageIcons {
+
+  width: 1.4rem;
+  padding: 5px;
+}
+
+.logoutIcon {
+
+}
+
+.inputField {
+  width: 100%;
+  background-color: #92002F;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  font-size: 16px;
+  padding: 2px 6px 2px 6px;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+  color: white;
+
+  &::placeholder {
+    color: rgb(194, 194, 194);
+  }
+}
+
+.containerCard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 0px 7px 20px 7px;
+  border-radius: 10px;
+  background-color: #92002F;
+}
+
+.rememberToFill {
+  font-size: 15px;
+  margin: 15px auto;
+  max-width: 300px;
+}
+
+.container {
+  height: 250px;
+}
+
+.uploadImage {
+  display: none;
+}
+
+.profileUserName {
+  padding-right: 7px;
+}
+
+.itemsContainer {
+  color: black;
+  padding: 0 20px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 2.5fr 3fr 10px 1fr;
+  margin: 20px 0;
+  font-size: 16px;
+  color: white;
+}
+
+.infoTitle {
+  line-height: 30px;
+  text-align: left;
+}
+
+.infoContent {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 30px;
+  text-align: left;
+  padding: 0 6px;
+}
+
+.editButton {
+  color: rgb(212, 212, 212);
+  cursor: pointer;
+  line-height: 28px;
+  border: 1px solid rgb(212, 212, 212);
+  box-sizing: border-box;
+  grid-column: 4 / 5;
+  min-width: 50px;
+}
+
+.closeButton {
+  color: rgb(212, 212, 212);
+  cursor: pointer;
+  line-height: 28px;
+  border: 1px solid #92002F;
+  // box-sizing: border-box;
+  grid-column: 4 / 5;
+}
+
+
+.submitButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 10px;
+
+  border-radius: 5px; /* 5px rounded corners */
+  margin: .5em 5em;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px; /* 5px rounded corners */
+  margin: .5em 5em;
+}
+
+
+.profileImg {
+  border-radius: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 170px;
+  width: 170px;
+  object-fit: cover;
+  box-sizing: border-box;
+  border: 3px solid #2D2B2C;
+}
+
+.saveChanges {
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+  border-color: white;
+  border-style: none;
+  border-radius: 50px; /* 5px rounded corners */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  max-width: 300px;
+  align-items: center;
+  text-align: center;
+  background-color: #f6efe8;
+}
+
+.logoutButtonWrapper {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoutIcon {
+  margin-left: 3px;
+  width: auto;
+  height: 20px;
+  
+}
+
+.logoutButton {
+  margin-top: 20px;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+  border-color: white;
+  border-style: none;
+  border-radius: 50px; /* 5px rounded corners */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  max-width: 300px;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: #333333;
+}
+
+.editLabel {
+  background-color: white;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+
+  &:active {
+    transition: all 0.5s;
+    transform: scale(1.1);
+  }
+}
+
+.editIcon {
+  height: 25px;
+  width: 25px;
+}
+
+.selectField {
+  background-color: #92002F;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  width: 100%;
+  padding: 2px 2px 1px 2px;
+  font-size: 16px;
+  font-family: 'Poppins';
+  color: white;
+}
+
+.avatarContainer {
+  position: relative;
+  height: 100%;
+  width: 170px;
+  margin: auto;
+}

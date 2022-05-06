@@ -1,0 +1,115 @@
+/*** Layout styling ***/
+
+/*** custom classes ***/
+.body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+.pointer,
+button {
+  cursor: pointer;
+}
+
+// .pagePadding {
+//   padding-top: 50px;
+//   padding-bottom: 50px;
+// }
+
+.disable_scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.flex--center {
+  @extend .flex;
+  justify-content: center;
+}
+
+.flex--navBar {
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+}
+
+.flex--postNav {
+  @extend .flex;
+  :nth-child(2) {
+    padding-right: 15px;
+  }
+}
+
+.flex--space-around {
+  @extend .flex;
+  justify-content: space-around;
+}
+
+.flex--space-between {
+  @extend .flex;
+  justify-content: space-around;
+}
+
+.flex--space-postNav {
+  @extend .flex;
+  margin: 10px 11px 0px 11px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f6efe8;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: 16px 0px 5px 0px;
+  :last-child {
+    margin-right: 0px;
+  }
+}
+
+.flex--space-left {
+  @extend .flex;
+  height: 50px;
+  padding: 2px 12px;
+  flex-basis: 100%;
+  flex: 1 1 auto;
+  flex-grow: 1;
+  background-color: #dfc5c5;
+  border-radius: 3px;
+  img {
+    border-radius: 100%;
+    margin: 3px 0px;
+    height: 30px;
+    width: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.flex--space-right {
+  @extend .flex;
+  justify-content: flex-end;
+  flex-basis: 90%;
+  font-size: 14px;
+}
+
+.flex--space-subNav {
+  display: flex;
+
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  :first-child {
+    align-self: stretch;
+  }
+}
+

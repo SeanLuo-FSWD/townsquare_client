@@ -1,0 +1,47 @@
+.filterContainer {
+  justify-content: space-around;
+  font-size: 13px;
+  height: 70%;
+}
+
+.filterTitle {
+  margin: 5px 0;
+}
+
+// .filterStyling {
+//   width: 100%;
+//   font-size: 13px;
+// }
+
+
+
+.keywordSearch {
+  border: solid;
+  border-width: 1px;
+  border: 2px solid white;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 3px 0px;
+  border-radius: 5px;
+
+  &:focus {
+    border: 2px solid #92002f;
+    outline: none;
+  }
+
+  .keywordSearch::placeholder {
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+}
+
+
+
+.filterTitles {
+  color: white;
+  background: #92002f;
+  border-radius: 7px;
+  width: 150px;
+  font-size: 13px;
+  padding: 0 20px;
+}

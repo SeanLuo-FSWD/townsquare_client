@@ -1,0 +1,87 @@
+.addedUserContainer {
+  text-align: left;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  position: fixed;
+  top: 48px;
+  max-width: 600px;
+  width: 100%;
+  background-color: #333333;
+  color: white;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 20px 130px 20px 1fr;
+  height: 58px;
+}
+
+.titleContainer {
+  grid-column: 2 / 3;
+}
+
+.addedUserTitle {
+  font-size: 20px;
+  color: white;
+  line-height: 60px;
+}
+
+.addedList {
+  position: relative;
+  img {
+    border-radius: 50%;
+    border: solid;
+    border-color: #E5E5E5;
+  }
+  grid-column: 4 / 5;
+}
+
+.avatarContainer {
+  height: 60px;
+  box-sizing: border-box;
+  padding: 7px 0;
+  display: inline-flex;
+  position: absolute;
+}
+
+.avatarThumbnail {
+  height: 40px;
+  width: 40px;
+}
+
+.filterContainer {
+  padding: 50px 0;
+  width: 80%;
+  margin: auto;
+}
+
+.pageTitle {
+  font-size: 30px;
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  vertical-align: middle;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.filterInfo {
+  font-size: 14px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.footerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+.submitButton {
+  background-color: #b4315b;
+  padding: 15px 0;
+  width: 80%;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  margin: 10px auto;
+}
