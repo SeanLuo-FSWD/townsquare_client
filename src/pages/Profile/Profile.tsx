@@ -175,13 +175,13 @@ function Profile(props: any) {
                     <img
                       className={styles.profileImg}
                       src={person.avatarlink}
-                      alt=""
+                      alt="avatarlink"
                     />
                   ) : (
                     <img
                       className={styles.profileImg}
                       src={initPerson.avatar}
-                      alt=""
+                      alt="avatar"
                     />
                   )}
                   {/* <img

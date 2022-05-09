@@ -7,8 +7,30 @@ import homeIcon from "./home.svg";
 import settingsIcon from "./settings.svg";
 import usersIcon from "./users.svg";
 import chatIcon from "./chat.svg";
+import Badge from "@material-ui/core/Badge";
+import { LoginContext } from "../../store/context/LoginContext";
 
 function Navbar(props: any) {
+  const { setCerror, currentUser } = useContext(LoginContext);
+
+  const getMsgNotice = () => {
+    console.log("xxxxxxxxxxxxxxxxxxxxxx");
+    console.log(currentUser);
+
+    let display = null;
+
+    if (
+      !window.location.pathname.includes("/chatPage") &&
+      currentUser.hasMessage
+    ) {
+      display = "new";
+    }
+
+    console.log("displayyyyy");
+    console.log(display);
+
+    return display;
+  };
   return (
     <div className={`${styles.navBar} flex--navBar`}>
       <div
@@ -42,7 +64,16 @@ function Navbar(props: any) {
         }
       >
         <Link to="/chatPage">
-          <img className={styles.navIcon} src={chatIcon}></img>
+          <Badge
+            className="pointer"
+            badgeContent={getMsgNotice()}
+            color="primary"
+            onClick={() => {
+              // setShowDD(!showDD);
+            }}
+          >
+            <img className={styles.navIcon} src={chatIcon}></img>
+          </Badge>
         </Link>
       </div>
       <div

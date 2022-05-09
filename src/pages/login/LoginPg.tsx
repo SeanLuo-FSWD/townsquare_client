@@ -50,6 +50,7 @@ function Login() {
           setCerror(err.message);
         } else {
           setCerror("");
+
           setCurrentUser(result.data);
         }
       });
