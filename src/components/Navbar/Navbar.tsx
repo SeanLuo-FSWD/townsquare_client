@@ -9,9 +9,26 @@ import usersIcon from "./users.svg";
 import chatIcon from "./chat.svg";
 import Badge from "@material-ui/core/Badge";
 import { LoginContext } from "../../store/context/LoginContext";
+import socket from "../../utils/socketIO.util";
 
 function Navbar(props: any) {
-  const { setCerror, currentUser } = useContext(LoginContext);
+  const { setCerror, currentUser, setCurrentUser } = useContext(LoginContext);
+  // const [msgNotice, setMsgNotice] = useState(currentUser.hasMessage);
+
+  useEffect(() => {
+    console.log("navbar useeffect set");
+
+    socket.on("new_message_notification", () => {
+      console.log("2222222222222222");
+      console.log("new______message________notification____FE");
+
+      setCurrentUser({ ...currentUser, hasMessage: true });
+    });
+
+    return () => {
+      socket.off("new_message_notification");
+    };
+  }, []);
 
   const getMsgNotice = () => {
     console.log("xxxxxxxxxxxxxxxxxxxxxx");
@@ -20,7 +37,8 @@ function Navbar(props: any) {
     let display = null;
 
     if (
-      !window.location.pathname.includes("/chatPage") &&
+      window.location.pathname != "/chatPage" &&
+      window.location.pathname != "/chat" &&
       currentUser.hasMessage
     ) {
       display = "new";
@@ -68,9 +86,8 @@ function Navbar(props: any) {
             className="pointer"
             badgeContent={getMsgNotice()}
             color="primary"
-            onClick={() => {
-              // setShowDD(!showDD);
-            }}
+            // onClick={() => {
+            // }}
           >
             <img className={styles.navIcon} src={chatIcon}></img>
           </Badge>

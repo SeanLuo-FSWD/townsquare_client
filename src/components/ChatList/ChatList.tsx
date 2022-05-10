@@ -11,7 +11,8 @@ import Spinning from "../../pages/spinning.page";
 function ChatList() {
   const [chatList, setChatList] = useState(null) as any;
 
-  const { cerror, setCerror, currentUser } = useContext(LoginContext);
+  const { cerror, setCerror, currentUser, setCurrentUser } =
+    useContext(LoginContext);
 
   useEffect(() => {
     getAllConversationsByUserId((err: Error, result: any) => {
@@ -22,11 +23,17 @@ function ChatList() {
       }
     });
     socket.on("updateChats", (latestConversations) => {
+      console.log("User gotten a chat, is this just on Chat page?");
+
       setChatList(latestConversations);
     });
 
     return () => {
       socket.off("updateChats");
+
+      console.log("zzzzzzzzzz_________zzzzzzzzzzzzz");
+
+      setCurrentUser({ ...currentUser, hasMessage: false });
     };
   }, []);
 
@@ -35,7 +42,13 @@ function ChatList() {
     return (
       <>
         {chatList.map((c: any) => {
-          return <ChatListItem key={c.conversationId} convo={c} currentUser={currentUser} />;
+          return (
+            <ChatListItem
+              key={c.conversationId}
+              convo={c}
+              currentUser={currentUser}
+            />
+          );
         })}
         {/* {getAvatars(chatList)}
         {chatList.length > 4 && <span>...</span>} */}
@@ -44,10 +57,10 @@ function ChatList() {
   } else {
     return (
       <>
-          <Spinning />
+        <Spinning />
       </>
     );
-  }    
+  }
 }
 
 export default ChatList;
