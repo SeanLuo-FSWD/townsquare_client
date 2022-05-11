@@ -141,16 +141,19 @@ function Profile(props: any) {
       return (
         <div>
           <h3>
-            Welcome {currentUser.username}. Please fill your Age, Location and
-            Gender,
-            <br /> so you are searchable by others.
+            Welcome {currentUser.username}.<br />
+            Since it is your first time, please add a photo and view the
+            tutorial{" "}
+            <a href="https://youtu.be/_O5DshzvUsk" target="_blank">
+              here.
+            </a>
           </h3>
         </div>
       );
     } else {
       return (
         <div className={styles.rememberToFill}>
-          <h4>Remember to fill Age, Location and Gender to be searchable!</h4>
+          <h4>Make sure to fill Age, Location and Gender to be searchable!</h4>
         </div>
       );
     }

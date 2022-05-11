@@ -11,6 +11,9 @@ const Register = () => {
     username: "",
     email: "",
     password: "",
+    age: 0,
+    location: "",
+    gender: "",
   });
   const { setSignUpStatus, setCerror, cerror } = useContext(LoginContext);
   const [registerStatus, setRegisterStatus] = useState(false);
@@ -21,16 +24,40 @@ const Register = () => {
   }, []);
   const handleChange = (e: any) => {
     const name = e.target.name;
-    const value = e.target.value;
+    let value = e.target.value;
+    console.log("aaaaaaaaaaaaaaaaaaaaaaaa");
+    console.log(person);
+
+    if (name === "age") {
+      value = parseInt(value);
+    }
+
     setPerson({ ...person, [name]: value });
   };
   const handleRegister = (e: any) => {
     e.preventDefault();
-    if (person.email && person.password && person.username) {
+    let missing_fields = [];
+    for (const [key, value] of Object.entries(person)) {
+      console.log(`${key}: ${value}`);
+      if (!value) {
+        missing_fields.push(key);
+      }
+    }
+
+    if (missing_fields.length != 0) {
+      let missings = "";
+      missing_fields.forEach((element) => {
+        missings += `,${element} `;
+      });
+      window.alert(`Pleaes fill all fields, these are missing: ${missings}.`);
+    } else {
       const user_obj = {
         username: person.username,
         email: person.email,
         password: person.password,
+        age: person.age,
+        location: person.location,
+        gender: person.gender,
       };
       register(user_obj, (err: Error, result: any) => {
         if (err) {
@@ -39,14 +66,16 @@ const Register = () => {
         } else {
           setSignUpStatus(true);
           setRegisterStatus(true);
-
           // history.push("/");
         }
       });
-    } else {
-      setCerror("You are missing some credentials");
     }
   };
+
+  const ageArr = [];
+  for (let i = 1; i <= 100; i++) {
+    ageArr.push(i);
+  }
   return (
     <>
       {cerror && <Error message={cerror} />}
@@ -103,6 +132,68 @@ const Register = () => {
                       value={person.password}
                       onChange={handleChange}
                     />
+                  </div>
+                  <div className="form-control" style={{ marginTop: "5px" }}>
+                    <div
+                      className="flex"
+                      style={{ margin: "auto", width: "230px" }}
+                    >
+                      <label htmlFor="age">Age&nbsp;</label>
+
+                      <select
+                        name="age"
+                        onChange={handleChange}
+                        // value={person.age}
+                        style={{ width: "100%" }}
+                        required
+                      >
+                        {ageArr.map((year) => {
+                          return <option key={year}>{year}</option>;
+                        })}
+                      </select>
+                    </div>
+                  </div>
+                  <div className="form-control" style={{ marginTop: "5px" }}>
+                    <div
+                      className="flex"
+                      style={{ margin: "auto", width: "230px" }}
+                    >
+                      <label htmlFor="location">Location&nbsp;</label>
+                      <select
+                        name="location"
+                        onChange={handleChange}
+                        // value={person.location}
+                        style={{ width: "100%" }}
+                        required
+                      >
+                        <option value=""></option>
+                        <option value="Surrey">Surrey</option>
+                        <option value="Burnaby">Burnaby</option>
+                        <option value="Coquitlam">Coquitlam</option>
+                        <option value="Richmond">Richmond</option>
+                        <option value="Vancouver">Vancouver</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="form-control" style={{ marginTop: "5px" }}>
+                    <div
+                      className="flex"
+                      style={{ margin: "auto", width: "230px" }}
+                    >
+                      <label htmlFor="gender">Gender&nbsp;</label>
+                      <select
+                        name="gender"
+                        onChange={handleChange}
+                        // value={person.gender}
+                        style={{ width: "100%" }}
+                        required
+                      >
+                        <option value=""></option>
+                        <option value="female">female</option>
+                        <option value="male">male</option>
+                        <option value="other">other</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
               </form>
