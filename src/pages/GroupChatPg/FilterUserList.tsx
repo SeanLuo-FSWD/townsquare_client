@@ -81,8 +81,8 @@ function FilterUserList({
       <Navbar currentPath={window.location.pathname} />
       <SubNav>
         {/* <button onClick={toggleFilterProp}>Back to filter</button> */}
-        <img src={backIcon} onClick={history.goBack}/>
-        <img src={startChatIcon} onClick={onStartChatProp}/>
+        <img src={backIcon} onClick={history.goBack} style={{cursor: "pointer"}}/>
+        <img src={startChatIcon} onClick={onStartChatProp} style={{cursor: "pointer"}}/>
 
       </SubNav>
       <div className={styles.listWrapper}>

@@ -1,6 +1,6 @@
 import socketIO from "socket.io-client";
-
-import domainName from '../constants/domainName';
+import dotenv from "dotenv";
+dotenv.config();
 
 const connectionOptions = {
   "force new connection": true,
@@ -11,8 +11,12 @@ const connectionOptions = {
   autoConnect: false,
 } as any;
 
+const port = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : "http://localhost:8000";
 
-const socket = socketIO(domainName, {
+console.log('zzzzzzzzzzzzzzzzzzzzzzz____process.env.NODE_ENV');
+console.log(port);
+
+const socket = socketIO(port, {
   withCredentials: true,
   autoConnect: false,
 });

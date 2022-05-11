@@ -136,6 +136,26 @@ function Profile(props: any) {
     });
   }
 
+  function getFirstTimePrompt() {
+    if (currentUser.firstTime) {
+      return (
+        <div>
+          <h3>
+            Welcome {currentUser.username}. Please fill your Age, Location and
+            Gender,
+            <br /> so you are searchable by others.
+          </h3>
+        </div>
+      );
+    } else {
+      return (
+        <div className={styles.rememberToFill}>
+          <h4>Remember to fill Age, Location and Gender to be searchable!</h4>
+        </div>
+      );
+    }
+  }
+
   // if (person.id) {
   if (initPerson) {
     const ageArr = [];
@@ -151,7 +171,7 @@ function Profile(props: any) {
 
         <div className={styles.profilePage}>
           <div className={styles.profileContainer}>
-            {currentUser.firstTime ? (
+            {/* {currentUser.firstTime ? (
               <div>
                 <h3>
                   Welcome {currentUser.username}. Please fill your Age, Location
@@ -165,7 +185,8 @@ function Profile(props: any) {
                   Remember to fill Age, Location and Gender to be searchable!
                 </h4>
               </div>
-            )}
+            )} */}
+            {getFirstTimePrompt()}
             <div className={styles.containerCard}>
               {/* <div> */}
 
