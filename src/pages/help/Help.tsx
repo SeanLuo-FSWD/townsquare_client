@@ -100,14 +100,14 @@ function Help() {
         <p>
           Everytime someone click into chat with you or if you click into chat
           with someone, a new chat is created and will show up on both you and
-          the other person's chatlist. This is not a bug, but a feature!
+          the other person's chatlist.
         </p>
 
-        <h3>Are there notification for chat?</h3>
+        <h3>The notification for new messages are not appearing</h3>
 
         <p>
-          We have not implemented that feature. However, if you go to the chat
-          list page, all incoming chats should be updated realtime.
+          In order to simplify the implementation, the notification for chat
+          will only appear if you are not on a chat or chat list page.
         </p>
 
         <h3>How can I remove my posts?</h3>
@@ -119,15 +119,16 @@ function Help() {
         </p>
         <h3>Can I remove my profile?</h3>
         <p>
-          No. Unfortunately we haven't had the time to implement that feature.
-          If you are worried about your data, see "Privacy policy" section
-          below.
+          Yes, if you go to the profile page, the option to remove your profile
+          is at the bottom (Below logout). All your account information will be
+          erased, except the chat messages with other users. Please be sure
+          before you click the button.
         </p>
 
         <h3>Can I remove my comment?</h3>
         <p>
           No. Unfortunately we haven't had the time to implement that feature.
-          So don't write comment you may regret about!
+          So don't write comment you may regret!
         </p>
 
         <h3>Why do I see only 20 posts?</h3>
@@ -141,13 +142,8 @@ function Help() {
         </p>
 
         <h3>Additional help</h3>
-        <p>You can ask Johnny or Sean on demo day via Discord. </p>
-
-        <h2>Privacy policy :</h2>
-        <p style={{ paddingBottom: "50px" }}>
-          We will not share your data (email, images, etc) with any third party.
-          We will actually shut down the site and wipe out all contents (images,
-          user data, etc) after Friday, May 28th 2021.
+        <p style={{ paddingBottom: "100px" }}>
+          Please let Sean know if you need anything.
         </p>
       </div>
     </div>
