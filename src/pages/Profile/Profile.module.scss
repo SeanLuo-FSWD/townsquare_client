@@ -8,12 +8,10 @@
   max-width: 480px;
   width: 80%;
   margin: auto;
-
 }
 
 .profilePage {
 }
-
 
 .updateMessage {
   text-align: center;
@@ -21,25 +19,23 @@
 }
 
 .userPageIcons {
-
   width: 1.4rem;
   padding: 5px;
 }
 
 .logoutIcon {
-
 }
 
 .inputField {
   width: 100%;
-  background-color: #92002F;
+  background-color: #92002f;
   border: none;
   border-bottom: 1px solid white;
   outline: none;
   font-size: 16px;
   padding: 2px 6px 2px 6px;
   box-sizing: border-box;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   color: white;
 
   &::placeholder {
@@ -48,10 +44,10 @@
 }
 
 .containerCard {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 0px 7px 20px 7px;
   border-radius: 10px;
-  background-color: #92002F;
+  background-color: #92002f;
 }
 
 .rememberToFill {
@@ -112,11 +108,10 @@
   color: rgb(212, 212, 212);
   cursor: pointer;
   line-height: 28px;
-  border: 1px solid #92002F;
+  border: 1px solid #92002f;
   // box-sizing: border-box;
   grid-column: 4 / 5;
 }
-
 
 .submitButton {
   display: flex;
@@ -126,7 +121,7 @@
   grid-gap: 10px;
 
   border-radius: 5px; /* 5px rounded corners */
-  margin: .5em 5em;
+  margin: 0.5em 5em;
 }
 
 .submit {
@@ -135,11 +130,10 @@
   align-items: center;
   text-align: center;
   grid-gap: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px; /* 5px rounded corners */
-  margin: .5em 5em;
+  margin: 0.5em 5em;
 }
-
 
 .profileImg {
   border-radius: 100%;
@@ -152,7 +146,7 @@
   width: 170px;
   object-fit: cover;
   box-sizing: border-box;
-  border: 3px solid #2D2B2C;
+  border: 3px solid #2d2b2c;
 }
 
 .saveChanges {
@@ -166,7 +160,7 @@
   border-color: white;
   border-style: none;
   border-radius: 50px; /* 5px rounded corners */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   align-items: center;
   text-align: center;
@@ -174,7 +168,6 @@
 }
 
 .logoutButtonWrapper {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -184,7 +177,6 @@
   margin-left: 3px;
   width: auto;
   height: 20px;
-  
 }
 
 .logoutButton {
@@ -199,12 +191,35 @@
   border-color: white;
   border-style: none;
   border-radius: 50px; /* 5px rounded corners */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   align-items: center;
   text-align: center;
   color: white;
   background-color: #333333;
+}
+
+.deleteButton {
+  margin-top: 20px;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+  border-color: white;
+  border-style: none;
+  border-radius: 50px; /* 5px rounded corners */
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: #92002f;
+  display: block;
+  margin: auto;
+  margin-top: 1em;
 }
 
 .editLabel {
@@ -218,7 +233,7 @@
   padding: 10px;
   box-sizing: border-box;
   transition: all 0.5s;
-  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5); 
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
   cursor: pointer;
 
@@ -234,14 +249,14 @@
 }
 
 .selectField {
-  background-color: #92002F;
+  background-color: #92002f;
   border: none;
   border-bottom: 1px solid white;
   outline: none;
   width: 100%;
   padding: 2px 2px 1px 2px;
   font-size: 16px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   color: white;
 }
 

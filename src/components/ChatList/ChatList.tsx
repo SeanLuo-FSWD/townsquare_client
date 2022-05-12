@@ -31,8 +31,6 @@ function ChatList() {
     return () => {
       socket.off("updateChats");
 
-      console.log("zzzzzzzzzz_________zzzzzzzzzzzzz");
-
       setCurrentUser({ ...currentUser, hasMessage: false });
     };
   }, []);

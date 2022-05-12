@@ -30,7 +30,13 @@ function Help() {
           server is hosted on a free tier!
         </p>
 
-        <h2>FAQ/HELP :</h2>
+        <h2>
+          FAQ/HELP : Click&nbsp;
+          <a href="https://youtu.be/euSCJhgySNc" target="_blank">
+            Here
+          </a>
+          &nbsp;to see the full demo
+        </h2>
         <h3>Filters</h3>
         <h4>How does the basic filter works?</h4>
         <p>The filter allows you to filter for desired posts or users. </p>
@@ -141,7 +147,7 @@ function Help() {
         <p style={{ paddingBottom: "50px" }}>
           We will not share your data (email, images, etc) with any third party.
           We will actually shut down the site and wipe out all contents (images,
-          user data, etc) after Friday, May 28th.
+          user data, etc) after Friday, May 28th 2021.
         </p>
       </div>
     </div>

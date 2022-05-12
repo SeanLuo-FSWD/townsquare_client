@@ -25,8 +25,6 @@ const Register = () => {
   const handleChange = (e: any) => {
     const name = e.target.name;
     let value = e.target.value;
-    console.log("aaaaaaaaaaaaaaaaaaaaaaaa");
-    console.log(person);
 
     if (name === "age") {
       value = parseInt(value);
@@ -49,7 +47,8 @@ const Register = () => {
       missing_fields.forEach((element) => {
         missings += `,${element} `;
       });
-      window.alert(`Pleaes fill all fields, these are missing: ${missings}.`);
+      setCerror(`Please fill all fields, these are missing: ${missings}.`);
+      // window.alert(`Pleaes fill all fields, these are missing: ${missings}.`);
     } else {
       const user_obj = {
         username: person.username,
@@ -89,7 +88,20 @@ const Register = () => {
             src={townSquareLogo}
             alt="TownSquareLogo"
           ></img>
-          <h1 className="signUpTitle">Sign Up</h1>
+          <h1 className="signUpTitle" style={{ marginBottom: 0 }}>
+            Sign Up
+          </h1>
+          <a
+            href="https://youtu.be/euSCJhgySNc"
+            target="_blank"
+            style={{
+              color: "white",
+              display: "block",
+              marginBottom: "20px",
+            }}
+          >
+            View Demo Here
+          </a>
           {registerStatus ? (
             <div>
               <h1>
@@ -147,6 +159,7 @@ const Register = () => {
                         style={{ width: "100%" }}
                         required
                       >
+                        <option key="0"></option>
                         {ageArr.map((year) => {
                           return <option key={year}>{year}</option>;
                         })}

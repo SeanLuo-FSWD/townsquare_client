@@ -18,10 +18,6 @@ function ChatListItem(props: any) {
     setAddedGroup(props.convo.members);
   }, []);
 
-  console.log("aaaaaaaaaaaaaaaaaaaaaaaa");
-  console.log("fffffffffffffffffffffff");
-  console.log(props.convo);
-
   function getAvatars() {
     const length =
       props.convo.members.length > 2 ? 2 : props.convo.members.length;

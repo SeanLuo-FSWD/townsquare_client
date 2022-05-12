@@ -19,7 +19,7 @@ const getLikesByPostId = (postId: string, cb: Function) => {
       if (!err.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -43,7 +43,7 @@ const getAllCommentsByPostId = (postId: string, cb: Function) => {
       if (!err.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -67,7 +67,7 @@ const getFullPostByPostId = (postId: string, cb: Function) => {
       if (!err.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -96,7 +96,7 @@ const deletePost = (postId: string, cb: Function) => {
       if (!err.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -126,7 +126,7 @@ const postCreate = (bodyFormData: any, cb: Function) => {
       if (!err.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -145,9 +145,6 @@ const fetchFeed = (feedPg: any, cUser: any, cb: Function) => {
       }
     )
     .then((response) => {
-      console.log("aaaaaaaaaaaaaaaaaaaaaaaa");
-      console.log("fetchFeed");
-      console.log(response.data);
       cb(null, response.data);
     })
     .catch((err) => {
@@ -155,7 +152,7 @@ const fetchFeed = (feedPg: any, cUser: any, cb: Function) => {
       if (!err.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -182,7 +179,7 @@ const toggleLikePost = (postId: string, receiverId: string, cb: Function) => {
       if (!err.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -209,7 +206,7 @@ const createComment = (comment_obj: TComment, cb: Function) => {
       if (!err.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {

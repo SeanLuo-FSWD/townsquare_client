@@ -71,8 +71,20 @@ function Login() {
                 src={townSquareLogo}
                 alt="TownSquareLogo"
               ></img>
-              <h1 className="townSquareTitle">TownSquare</h1>
-
+              <h1 className="townSquareTitle" style={{ marginBottom: 0 }}>
+                TownSquare
+              </h1>
+              <a
+                href="https://youtu.be/euSCJhgySNc"
+                target="_blank"
+                style={{
+                  color: "white",
+                  display: "block",
+                  marginBottom: "20px",
+                }}
+              >
+                View Demo Here
+              </a>
               <form className={styles.loginForm}>
                 <label htmlFor="uname"></label>
                 <input

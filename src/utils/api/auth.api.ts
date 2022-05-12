@@ -20,7 +20,7 @@ const getNotice = (cb: Function) => {
       if (!error.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -44,7 +44,7 @@ const clearAllNotifications = (cb: Function) => {
       if (!error.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -72,7 +72,7 @@ const removeNoticeById = (notice_obj: object, cb: Function) => {
       if (!error.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -96,7 +96,7 @@ const verify = (query: string, cb: Function) => {
       if (!error.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -125,7 +125,7 @@ const updateProfile = (bodyFormData: any, cb: Function) => {
       if (!error.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -150,7 +150,7 @@ const authenticate = (cb: Function) => {
       if (!error.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -175,7 +175,32 @@ const logout = (cb: Function) => {
       if (!error.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
+          )
+        );
+      } else {
+        cb(error.response.data);
+      }
+    });
+};
+
+const deleteAccount = (cb: Function) => {
+  axios
+    .get(`${API_URL}/user/deleteaccount`, {
+      withCredentials: true,
+    })
+    .then((response) => {
+      console.log("deleteAccount response");
+      console.log(response);
+      cb(null, response);
+    })
+    .catch((error) => {
+      console.log("deleteAccount error");
+      console.log(error);
+      if (!error.response) {
+        cb(
+          new Error(
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -203,7 +228,7 @@ const login = (user_obj: any, cb: Function) => {
       if (!error.response) {
         cb(
           new Error(
-            "Wow the server MAY have crashed...be a hero, and tell Johnny or Sean  ASAP. Please also remember the steps leading to this."
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
           )
         );
       } else {
@@ -246,4 +271,5 @@ export {
   getNotice,
   removeNoticeById,
   clearAllNotifications,
+  deleteAccount,
 };

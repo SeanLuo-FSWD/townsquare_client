@@ -161,8 +161,8 @@ function Chat(props: any) {
     e.preventDefault();
 
     if (!inputTxt) return;
-    console.log("submit message chatId ====");
-    console.log(props.chatId);
+    console.log("submit message chatId ==== inputTxt");
+    console.log(inputTxt);
 
     socket.emit("chat message", {
       userId: currentUser.userId,

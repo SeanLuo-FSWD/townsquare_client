@@ -7,8 +7,10 @@ import styles from "./Profile.module.scss";
 import _ from "lodash";
 import SubNav from "../../components/Navbar/SubNav";
 import { logout } from "../../utils/api/auth.api";
+import { deleteAccount } from "../../utils/api/auth.api";
 import changeProfileImg from "./assets/image.svg";
 import logoutImage from "./assets/logout.svg";
+
 import closeIcon from "./assets/close.svg";
 import editImage from "./assets/edit.svg";
 import { connect } from "react-redux";
@@ -18,7 +20,6 @@ import {
 } from "../../store/redux/actions/filter_act";
 import Error from "../../components/Error/Error";
 import Spinning from "../spinning.page";
-import editIcon from "./assets/edit_icon.png";
 
 function Profile(props: any) {
   const [initPerson, setInitPerson] = useState(null) as any;
@@ -131,6 +132,24 @@ function Profile(props: any) {
         setCurrentUser(null);
         props.onFeedFilterRemove();
         props.onPeopleFilterRemove();
+        history.push("/");
+      }
+    });
+  }
+
+  function handleAccountDelete() {
+    deleteAccount((err: Error, result: any) => {
+      if (err) {
+        console.log(err);
+        setCerror(err.message);
+      } else {
+        setCerror("");
+        setCurrentUser(null);
+        props.onFeedFilterRemove();
+        props.onPeopleFilterRemove();
+        window.alert(
+          "Your account has been deleted, you will be redirected to the login page"
+        );
         history.push("/");
       }
     });
@@ -431,9 +450,15 @@ function Profile(props: any) {
                 <img
                   className={`pointer ${styles.logoutIcon}`}
                   src={logoutImage}
-                  onClick={handleLogout}
                 />
               </div>
+            </button>
+
+            <button
+              className={`pointer ${styles.deleteButton}`}
+              onClick={handleAccountDelete}
+            >
+              !Delete Account!
             </button>
           </div>
         </div>
