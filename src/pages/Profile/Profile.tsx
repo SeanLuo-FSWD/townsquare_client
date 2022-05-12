@@ -163,7 +163,7 @@ function Profile(props: any) {
             Welcome {currentUser.username}.<br />
             Since it is your first time, please add a photo and view the
             tutorial{" "}
-            <a href="https://youtu.be/_O5DshzvUsk" target="_blank">
+            <a href="https://youtu.be/TWWylIMUOBg" target="_blank">
               here.
             </a>
           </h3>

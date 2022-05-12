@@ -92,7 +92,7 @@ const Register = () => {
             Sign Up
           </h1>
           <a
-            href="https://youtu.be/euSCJhgySNc"
+            href="https://youtu.be/TWWylIMUOBg"
             target="_blank"
             style={{
               color: "white",

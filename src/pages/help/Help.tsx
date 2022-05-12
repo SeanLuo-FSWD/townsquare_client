@@ -32,7 +32,7 @@ function Help() {
 
         <h2>
           FAQ/HELP : Click&nbsp;
-          <a href="https://youtu.be/euSCJhgySNc" target="_blank">
+          <a href="https://youtu.be/TWWylIMUOBg" target="_blank">
             Here
           </a>
           &nbsp;to see the full demo
