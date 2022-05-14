@@ -83,9 +83,7 @@ const removeNoticeById = (notice_obj: object, cb: Function) => {
 
 const verify = (query: string, cb: Function) => {
   axios
-    .get(`${API_URL}/user/verify?id=${query}`, {
-      withCredentials: true,
-    })
+    .get(`${API_URL}/user/verify?id=${query}`)
     .then((response) => {
       console.log("verify response");
       console.log(response);
