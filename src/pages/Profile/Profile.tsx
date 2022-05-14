@@ -156,13 +156,15 @@ function Profile(props: any) {
   }
 
   function getFirstTimePrompt() {
-    if (currentUser.firstTime) {
+    if (
+      initPerson.avatar ==
+      "https://res.cloudinary.com/dmsrej5yr/image/upload/v1652241055/images_svupse.png"
+    ) {
       return (
         <div>
           <h3>
             Welcome {currentUser.username}.<br />
-            Since it is your first time, please add a photo and view the
-            tutorial{" "}
+            Please add a photo, and view the tutorial if not already{" "}
             <a href="https://youtu.be/TWWylIMUOBg" target="_blank">
               here.
             </a>
@@ -172,7 +174,13 @@ function Profile(props: any) {
     } else {
       return (
         <div className={styles.rememberToFill}>
-          <h4>Make sure to fill Age, Location and Gender to be searchable!</h4>
+          <h4>
+            Make sure to fill Age, Location and Gender to be searchable, and
+            view the tutorial if not already{" "}
+            <a href="https://youtu.be/TWWylIMUOBg" target="_blank">
+              here.
+            </a>
+          </h4>
         </div>
       );
     }
