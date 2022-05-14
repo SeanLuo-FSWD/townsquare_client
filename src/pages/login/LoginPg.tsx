@@ -52,6 +52,7 @@ function Login() {
           setCerror(err.message);
         } else {
           setCerror("");
+          console.log("login user, should not be first time anymore");
 
           setCurrentUser(result.data);
         }
