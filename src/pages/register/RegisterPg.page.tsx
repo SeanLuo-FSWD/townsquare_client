@@ -5,6 +5,8 @@ import { register } from "../../utils/api/auth.api";
 import Error from "../../components/Error/Error";
 import styles from "./RegisterPg.module.scss";
 import townSquareLogo from "./assets/townSquareLogo.svg";
+import dotenv from "dotenv";
+dotenv.config();
 
 const Register = () => {
   const [person, setPerson] = useState({
@@ -18,6 +20,9 @@ const Register = () => {
   const { setSignUpStatus, setCerror, cerror } = useContext(LoginContext);
   const [registerStatus, setRegisterStatus] = useState(false);
   useEffect(() => {
+    console.log("process.env.REACT_APP_URL");
+    console.log(process.env.REACT_APP_URL);
+
     return () => {
       setCerror("");
     };

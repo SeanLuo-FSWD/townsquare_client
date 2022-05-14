@@ -19,6 +19,9 @@ function Login() {
   });
 
   useEffect(() => {
+    console.log("process.env.REACT_APP_URL");
+    console.log(process.env.REACT_APP_URL);
+
     authenticate((err: Error, result: any) => {
       if (err) {
         setCurrentUser(null);
