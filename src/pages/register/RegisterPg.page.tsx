@@ -92,15 +92,14 @@ const Register = () => {
             Sign Up
           </h1>
           <a
-            href="https://youtu.be/TWWylIMUOBg"
-            target="_blank"
+            href={`${process.env.REACT_APP_URL}/help`}
             style={{
               color: "white",
               display: "block",
               marginBottom: "20px",
             }}
           >
-            View Demo Here
+            Help
           </a>
           {registerStatus ? (
             <div>

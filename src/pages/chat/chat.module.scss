@@ -15,14 +15,12 @@
   scroll-snap-type: mandatory;
 
   overflow-y: scroll;
-
 }
-.avatarNav {  
+.avatarNav {
   display: flex;
   position: relative;
   flex-direction: row;
 
-  
   img {
     border-radius: 50%;
     margin: 0px 3px;
@@ -38,7 +36,6 @@
 
 .img {
   border-radius: 50%;
-
 }
 
 .messageContainer {
@@ -90,10 +87,10 @@
 .chatSubNavWrapper {
   display: flex;
   justify-content: space-between;
-  flex-basis: 100%;
+  // flex-basis: 100%;
   align-items: center;
   position: relative;
-  right: 30px;
+  right: 75px;
   top: 9px;
 }
 
@@ -118,6 +115,6 @@
   width: 30px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #2D2B2C;
+  border: 2px solid #2d2b2c;
   box-sizing: border-box;
 }

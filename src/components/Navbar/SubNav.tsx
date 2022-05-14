@@ -89,9 +89,21 @@ function SubNav(props: any) {
             history.push("/help");
           }}
         />
-        <div className={styles.logoTitle}>TownSquare</div>
+        <p className={styles.logoTitle}>{currentUser.username}</p>
         {/* <p style={{ paddingLeft: "20px" }}>{currentUser.username}</p> */}
         {/* <div>TownSquare</div> */}
+      </div>
+
+      <div className={styles.demoWrap}>
+        <p>
+          <a
+            className={styles.demoText}
+            href="https://youtu.be/TWWylIMUOBg"
+            target="_blank"
+          >
+            View Demo
+          </a>
+        </p>
       </div>
 
       <div className={styles.commonIcons}>

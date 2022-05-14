@@ -7,6 +7,8 @@ import Error from "../../components/Error/Error";
 import styles from "./LoginPg.module.scss";
 import townSquareLogo from "./assets/townSquareLogo.svg";
 import { authenticate } from "../../utils/api/auth.api";
+import dotenv from "dotenv";
+dotenv.config();
 
 function Login() {
   const { setCurrentUser, cerror, setCerror } = useContext(LoginContext);
@@ -75,15 +77,14 @@ function Login() {
                 TownSquare
               </h1>
               <a
-                href="https://youtu.be/TWWylIMUOBg"
-                target="_blank"
+                href={`${process.env.REACT_APP_URL}/help`}
                 style={{
                   color: "white",
                   display: "block",
                   marginBottom: "20px",
                 }}
               >
-                View Demo Here
+                Help
               </a>
               <form className={styles.loginForm}>
                 <label htmlFor="uname"></label>

@@ -3,15 +3,15 @@ import Navbar from "../../components/Navbar/Navbar";
 import SubNav from "../../components/Navbar/SubNav";
 import { useHistory } from "react-router-dom";
 import styles from "./help.module.scss";
-import backIcon from "./assets/backIcon.svg";
+import HelpNav from "./HelpNav";
 
 function Help() {
   const history = useHistory();
 
   return (
     <div className="pagePadding">
-      <Navbar currentPath={window.location.pathname} />
-      <SubNav className="flex--space-between">
+      {/* <Navbar currentPath={window.location.pathname} /> */}
+      {/* <SubNav className="flex--space-between">
         <button
           className={styles.backButton}
           onClick={() => {
@@ -21,22 +21,39 @@ function Help() {
           Back
           <img src={backIcon} className={styles.backIcon} />
         </button>
-      </SubNav>
-
+      </SubNav> */}
+      <HelpNav className="flex--space-between"></HelpNav>
       <div className={styles.helpWrapper}>
-        <h2 style={{ marginTop: "60px" }}>Terms of use :</h2>
+        <h2 style={{ marginTop: "60px" }}>Important:</h2>
+
+        <p>
+          <strong>
+            Due to cross-origin hosting between the API and client, please make
+            sure to use Chrome only, and that "Allow all cookies" are selected
+            if using incognito mode.&nbsp;
+            <a
+              href="https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Callow-or-block-cookies"
+              target="_blank"
+            >
+              See here for instructions.
+            </a>
+          </strong>
+        </p>
+        <br />
         <p>
           Please do not spam or post massive amounts of pictures(20+), as our
           server is hosted on a free tier!
         </p>
-
-        <h2>
-          FAQ/HELP : Click&nbsp;
+        <br />
+        <p>
+          Click&nbsp;
           <a href="https://youtu.be/TWWylIMUOBg" target="_blank">
             Here
           </a>
-          &nbsp;to see the full demo
-        </h2>
+          &nbsp;to see the full demo.
+        </p>
+
+        <h2>FAQ/HELP:</h2>
         <h3>Filters</h3>
         <h4>How does the basic filter works?</h4>
         <p>The filter allows you to filter for desired posts or users. </p>
@@ -142,9 +159,20 @@ function Help() {
         </p>
 
         <h3>Additional help</h3>
-        <p style={{ paddingBottom: "100px" }}>
+        <p style={{ paddingBottom: "20px" }}>
           Please let Sean know if you need anything.
         </p>
+      </div>
+      <div className={styles.helpWrapper}>
+        <h2>Tech Stack:</h2>
+        <h3>Front End</h3>
+        <p>React: hosted on Vercel</p>
+
+        <h3>Backend</h3>
+        <p>Node.js: hosted on Heroku</p>
+
+        <h3>Database</h3>
+        <p style={{ paddingBottom: "100px" }}>Mongodb: hosted on Atlas</p>
       </div>
     </div>
   );
