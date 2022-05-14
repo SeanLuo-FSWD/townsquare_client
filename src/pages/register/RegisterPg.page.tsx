@@ -20,9 +20,6 @@ const Register = () => {
   const { setSignUpStatus, setCerror, cerror } = useContext(LoginContext);
   const [registerStatus, setRegisterStatus] = useState(false);
   useEffect(() => {
-    console.log("process.env.REACT_APP_URL");
-    console.log(process.env.REACT_APP_URL);
-
     return () => {
       setCerror("");
     };

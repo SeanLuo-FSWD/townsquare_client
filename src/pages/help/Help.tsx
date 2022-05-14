@@ -46,11 +46,13 @@ function Help() {
         </p>
         <br />
         <p>
-          Click&nbsp;
-          <a href="https://youtu.be/TWWylIMUOBg" target="_blank">
-            Here
-          </a>
-          &nbsp;to see the full demo.
+          <strong>
+            Click&nbsp;
+            <a href="https://youtu.be/TWWylIMUOBg" target="_blank">
+              Here
+            </a>
+            &nbsp;to see the full app demo.
+          </strong>
         </p>
 
         <h2>FAQ/HELP:</h2>
