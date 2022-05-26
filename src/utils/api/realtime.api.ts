@@ -4,6 +4,33 @@ import _ from "lodash";
 import { v4 as uuidv4 } from "uuid";
 import API_URL from "../../constants/api_url";
 
+
+const removeHasMessage = (cb: Function) => {
+  axios
+    .get(`${API_URL}/conversation/removeHasMessage`, {
+      withCredentials: true,
+    })
+    .then((response) => {
+      console.log("removeHasMessage response");
+      console.log(response);
+      cb(null, response.data);
+    })
+    .catch((error) => {
+      console.log("removeHasMessage error");
+      console.log(error);
+
+      if (!error.response) {
+        cb(
+          new Error(
+            "Wow the server MAY have crashed, please tell Sean, and also remember the steps leading to this."
+          )
+        );
+      } else {
+        cb(error.response.data);
+      }
+    });
+}
+
 const getConversationByMembers = (addedGroupIds: string[], cb: Function) => {
   console.log("getConversationByMembers called");
   console.log(addedGroupIds);
@@ -103,4 +130,4 @@ const getMessagesInConversation = (chatId: string, cb: Function) => {
     });
 };
 
-export { getConversationByMembers, getMessagesInConversation };
+export { getConversationByMembers, getMessagesInConversation, removeHasMessage };

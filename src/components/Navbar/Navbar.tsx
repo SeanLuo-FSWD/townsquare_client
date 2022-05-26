@@ -10,6 +10,9 @@ import chatIcon from "./chat.svg";
 import Badge from "@material-ui/core/Badge";
 import { LoginContext } from "../../store/context/LoginContext";
 import socket from "../../utils/socketIO.util";
+import {
+  removeHasMessage
+} from "../../utils/api/realtime.api";
 
 function Navbar(props: any) {
   const { setCerror, currentUser, setCurrentUser } = useContext(LoginContext);
@@ -22,7 +25,24 @@ function Navbar(props: any) {
       console.log("2222222222222222");
       console.log("new______message________notification____FE");
 
-      setCurrentUser({ ...currentUser, hasMessage: true });
+      // If user already on the chatLIST page, no need to display new message, and instead remove the "hasNewMessage" for that user.
+      if(window.location.pathname === "/chatPage") {
+
+  
+        
+        removeHasMessage((err: Error, result: any) => {
+          if (err) {
+            setCerror(err.message);
+          } 
+          else {
+            setCurrentUser({ ...currentUser, hasMessage: false });
+          }
+        });
+      }
+      else {
+        setCurrentUser({ ...currentUser, hasMessage: true });
+      }
+
     });
 
     return () => {
@@ -37,8 +57,8 @@ function Navbar(props: any) {
     let display = null;
 
     if (
-      window.location.pathname != "/chatPage" &&
-      window.location.pathname != "/chat" &&
+      // window.location.pathname != "/chatPage" &&
+      // window.location.pathname != "/chat" &&
       currentUser.hasMessage
     ) {
       display = "new";

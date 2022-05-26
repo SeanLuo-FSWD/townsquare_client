@@ -14,11 +14,22 @@ import {
 import { useHistory } from "react-router-dom";
 import { LoginContext } from "../../store/context/LoginContext";
 import Error from "../../components/Error/Error";
+import { removeHasMessage } from "../../utils/api/realtime.api";
 
 function Chat(props: any) {
   const history = useHistory();
-  const { cerror, setCerror } = useContext(LoginContext);
+  const { cerror, setCerror, setCurrentUser, currentUser } = useContext(LoginContext);
   useEffect(() => {
+    console.log('chatList page hit first time');
+    removeHasMessage((err: Error, result: any) => {
+      if (err) {
+        setCerror(err.message);
+      } 
+      else {
+        setCurrentUser({ ...currentUser, hasMessage: false });
+      }
+    });
+
     return () => {
       setCerror("");
     };
