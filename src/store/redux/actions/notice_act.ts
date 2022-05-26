@@ -16,6 +16,7 @@ const doNoticeError = (error: string) => async (dispatch: Dispatch) => {
   });
 };
 
+// NOT USED
 const doNoticeAdd = (notice: Object) => async (dispatch: Dispatch) => {
   dispatch({
     type: NOTICE_STATE_ADD,
@@ -23,6 +24,7 @@ const doNoticeAdd = (notice: Object) => async (dispatch: Dispatch) => {
   });
 };
 
+// NOT USED
 const doNoticeRemove = (noticeId: string) => async (dispatch: Dispatch) => {
   dispatch({
     type: NOTICE_STATE_REMOVE,

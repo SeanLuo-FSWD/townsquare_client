@@ -1,7 +1,6 @@
 import { Home } from "@material-ui/icons";
 import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 import styles from "./Navbar.module.scss";
 import homeIcon from "./home.svg";
 import settingsIcon from "./settings.svg";
@@ -13,15 +12,11 @@ import socket from "../../utils/socketIO.util";
 
 function Navbar(props: any) {
   const { setCerror, currentUser, setCurrentUser } = useContext(LoginContext);
-  // const [msgNotice, setMsgNotice] = useState(currentUser.hasMessage);
 
   useEffect(() => {
     console.log("navbar useeffect set");
 
     socket.on("new_message_notification", () => {
-      console.log("2222222222222222");
-      console.log("new______message________notification____FE");
-
       setCurrentUser({ ...currentUser, hasMessage: true });
     });
 
@@ -31,8 +26,6 @@ function Navbar(props: any) {
   }, []);
 
   const getMsgNotice = () => {
-    console.log("xxxxxxxxxxxxxxxxxxxxxx");
-    console.log(currentUser);
 
     let display = null;
 
@@ -43,9 +36,6 @@ function Navbar(props: any) {
     ) {
       display = "new";
     }
-
-    console.log("displayyyyy");
-    console.log(display);
 
     return display;
   };
@@ -86,8 +76,6 @@ function Navbar(props: any) {
             className="pointer"
             badgeContent={getMsgNotice()}
             color="primary"
-            // onClick={() => {
-            // }}
           >
             <img className={styles.navIcon} src={chatIcon}></img>
           </Badge>

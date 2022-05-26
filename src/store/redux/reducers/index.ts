@@ -6,6 +6,8 @@ import storage from "redux-persist/lib/storage";
 import filterReducer from "./filter";
 import chatReducer from "./chat.rdc";
 import noticeReducer from "./notice.rdc";
+import notificationSlice from "./notificationSlice";
+import { configureStore } from "@reduxjs/toolkit";
 
 const persistConfig = {
   key: "root",
@@ -13,14 +15,24 @@ const persistConfig = {
   whitelist: ["filterState", "chatState"],
 };
 
-const rootReducer = combineReducers({
-  // feedState: feedReducer,
-  // usersState: userReducer,
-  filterState: filterReducer,
-  chatState: chatReducer,
-  noticeState: noticeReducer,
+// const rootReducer = combineReducers({
+//   // feedState: feedReducer,
+//   // usersState: userReducer,
+//   filterState: filterReducer,
+//   chatState: chatReducer,
+//   noticeState: noticeReducer,
+//   notificationState: notificationSlice.reducer,
+// });
+
+const store = configureStore({
+  reducer: {
+    filterState: filterReducer,
+    chatState: chatReducer as any,
+    noticeState: noticeReducer as any,
+    notificationState: notificationSlice.reducer,
+  }
 });
 
-// export default rootReducer;
+export default store;
 
-export default persistReducer(persistConfig, rootReducer);
+// export default persistReducer(persistConfig, rootReducer);

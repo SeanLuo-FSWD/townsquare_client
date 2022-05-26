@@ -18,6 +18,8 @@ function filterReducer(filterState = INITIAL_STATE, action: FilterActionTypes) {
       return { ...filterState, error: action.error };
     }
     case FEED_FILTER_UPDATE: {
+      console.log("FEED_FILTER_UPDATE");
+      
       const keyValArr = Object.entries(action.filter)[0];
       console.log(keyValArr);
 
@@ -29,9 +31,13 @@ function filterReducer(filterState = INITIAL_STATE, action: FilterActionTypes) {
       return filterStore;
     }
     case FEED_FILTER_REMOVE: {
+      console.log("FEED_FILTER_REMOVE");
+      
       return { ...filterState, feedPg: INITIAL_STATE.feedPg };
     }
     case PEOPLE_FILTER_UPDATE: {
+      console.log("PEOPLE_FILTER_UPDATE");
+      
       const filterStore = { ...filterState, peoplePg: action.filter.peoplePg };
 
       return filterStore;

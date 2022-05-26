@@ -114,14 +114,6 @@ function Help() {
           "followed" box.
         </p>
 
-        <h3>Why am I seeing empty chats?</h3>
-
-        <p>
-          Everytime someone click into chat with you or if you click into chat
-          with someone, a new chat is created and will show up on both you and
-          the other person's chatlist.
-        </p>
-
         <h3>The notification for new messages are not appearing</h3>
 
         <p>

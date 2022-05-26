@@ -23,6 +23,9 @@ function Login() {
       if (err) {
         setCurrentUser(null);
       } else {
+        console.log('LoginPg_________LoginPg_________LoginPg');
+        console.log(result.data);
+        
         setCurrentUser(result.data);
       }
       setAuthCalled(true);

@@ -4,7 +4,7 @@ import styles from "./SubNav.module.scss";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import Badge from "@material-ui/core/Badge";
 import { Link, useHistory } from "react-router-dom";
-import { connect } from "react-redux";
+import { connect, useSelector, useDispatch } from "react-redux";
 import {
   doNoticeError,
   doNoticeAdd,
@@ -19,15 +19,26 @@ import HelpIcon from "@material-ui/icons/Help";
 import { v4 as uuidv4 } from "uuid";
 import townSquareLogo from "./assets/townSquareLogo.svg";
 import Overlay from "../../UI/Overlay";
+import { notificationActions } from "../../store/redux/reducers/notificationSlice";
+// import { notificationActions } from "../../store/redux/reducers/notificationSlice";
 
 function SubNav(props: any) {
   const { setCerror, currentUser } = useContext(LoginContext);
   const history = useHistory();
-
   const [showDD, setShowDD] = useState(false);
 
-  // console.log(props.notices);
+  // console.log(notification);
   const tappable = new Set(["pagePadding", "vsc-initialized"]);
+
+  const notification = useSelector((state: any) => state.notificationState.notices);
+  // const notification = useSelector((state: any) => state);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+      console.log('xxxxxxxxxxx2222222222222222xxxxxxxxxxx');
+      console.log(notification);
+  }, [notification, dispatch]);
+
   useEffect(() => {
     document.body.addEventListener("click", (e: any) => {
       // e.stopPropagation();
@@ -43,6 +54,13 @@ function SubNav(props: any) {
     noticeId: string,
     receiverId: string
   ) {
+
+    console.log('notice___removallll____start: ');
+    console.log(link);
+    console.log(noticeId);
+    console.log(receiverId);
+    console.log('notice___removallll____end: ');
+    
     const notice_obj = {
       notificationId: noticeId,
       receiverId: receiverId,
@@ -54,7 +72,9 @@ function SubNav(props: any) {
         console.log("SubNav - getNotice : result <=====================");
 
         console.log(result);
-        props.doNoticeSetProp(result);
+
+        dispatch(notificationActions.noticeStateSet(result));
+        // notificationActions.noticeStateSet(result);
         const linkTarget = {
           pathname: link,
           key: uuidv4(),
@@ -69,7 +89,7 @@ function SubNav(props: any) {
       if (err) {
         setCerror(err.message);
       } else {
-        props.doNoticeSetProp([]);
+        dispatch(notificationActions.noticeStateSet([]));
         setShowDD(false);
       }
     });
@@ -112,7 +132,7 @@ function SubNav(props: any) {
         <div>
           <Badge
             className="pointer"
-            badgeContent={props.notices.length}
+            badgeContent={notification.length}
             max={10}
             color="primary"
             onClick={() => {
@@ -131,7 +151,7 @@ function SubNav(props: any) {
         {showDD && (
           <>
             <div className={styles.alert}>
-              {props.notices.map((n: any) => {
+              {notification.map((n: any) => {
                 return (
                   <div className={styles.notificationWrapper}>
                     <div key={n._id}>
@@ -143,12 +163,12 @@ function SubNav(props: any) {
                         }
                       >
                         {/* <Link to={n.link}>{n.message}</Link> */}
-                        <div className={styles.userInfoWrapper}>
+                        <span className={styles.userInfoWrapper}>
                           {n.message}
-                        </div>
-                        <div className={styles.dateWrapper}>
+                        </span>
+                        <span className={styles.dateWrapper}>
                           {new Date(n.createdAt).toDateString()}
-                        </div>
+                        </span>
                       </p>
                     </div>
                   </div>

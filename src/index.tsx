@@ -5,13 +5,13 @@ import "./index.css";
 import App from "./App";
 // import store from "./store/redux/store";
 import { PersistGate } from "redux-persist/integration/react";
-import { store, persistor } from "./store/redux/store";
+import { store } from "./store/redux/store";
 
 ReactDOM.render(
   <Provider store={store}>
-    <PersistGate persistor={persistor}>
+    {/* <PersistGate persistor={persistor}> */}
       <App />
-    </PersistGate>
+    {/* </PersistGate> */}
   </Provider>,
   document.getElementById("root")
 );

@@ -47,6 +47,7 @@ function noticeReducer(noticeState = INITIAL_STATE, action: NoticeActionTypes) {
       console.log("action.noticeId");
       console.log(action.noticeId);
 
+      // Fiter out the clicked notice by Id. 
       const newNotices = _.filter(
         noticeState.notices,
         (n) => n._id !== action.noticeId

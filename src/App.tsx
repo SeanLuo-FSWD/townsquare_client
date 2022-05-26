@@ -11,9 +11,12 @@ import {
 } from "./store/redux/actions/notice_act";
 import io from "socket.io-client";
 import { getNotice } from "./utils/api/auth.api";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
+import { notificationActions } from "./store/redux/reducers/notificationSlice";
 
 function App(props: any) {
+  const dispatch = useDispatch();
+
   const [signUpStatus, setSignUpStatus] = useState(false);
   const [showModal, setShowModal] = useState("");
   const [modalProps, setModalProps] = useState(false);
@@ -27,6 +30,8 @@ function App(props: any) {
   };
 
   useEffect(() => {
+    console.log('App.tsx loadeeeeed');
+    
     if (currentUser) {
       console.log("--- socket connected");
       socket.connect();
@@ -37,8 +42,8 @@ function App(props: any) {
           setCerror(err.message);
         } else {
           console.log("App - getNotice : result <=====================");
-
           console.log(result);
+
           props.doNoticeSetProp(result);
         }
       });
@@ -59,7 +64,8 @@ function App(props: any) {
             console.log("App.tsx - notification socket - getNotice : result");
 
             console.log(result);
-            props.doNoticeSetProp(result);
+            dispatch(notificationActions.noticeStateSet(result))
+            // props.doNoticeSetProp(result);
           }
         });
       });
