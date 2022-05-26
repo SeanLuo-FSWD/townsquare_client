@@ -45,7 +45,7 @@ function Chat(props: any) {
       if (err) {
         setCerror(err.message);
       } else {
-        socket.emit("enter chatroom", { conversationId: result._id });
+        socket.emit("enter chatroom", { conversationId: result._id, currentUserId : currentUser. });
         console.log("-------->>> getConversationByMembers <<<---------");
         console.log(result);
 
